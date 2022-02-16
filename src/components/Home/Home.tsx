@@ -65,7 +65,7 @@ export const Home = (props: Props) => {
         <Root>
             <NavbarContainer>
                 <Logo>
-                    <Link to="/" ><LogoA>Brand</LogoA>Brand</Link>
+                    <Link to="/" ><LogoA>Ranger Drones</LogoA></Link>
                 </Logo>
                 <LogoNavigation>
                     <li>
