@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { StyledEngineProvider } from '@mui/system';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home,Dashboard,Signin } from './components';
 import reportWebVitals from './reportWebVitals';
+import './styles.css'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StyledEngineProvider injectFirst>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home title  ={'Drones Inventory'}/>} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/signin' element={<Signin />} />
+        </Routes>
+      </Router>
+    </StyledEngineProvider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
